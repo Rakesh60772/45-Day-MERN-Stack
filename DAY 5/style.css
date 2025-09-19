@@ -1,0 +1,19 @@
+.outer{
+    height:220px;
+    width:430px;
+    background-color: antiquewhite;
+    border:4px groove burlywood;
+    border-radius: 10px;
+    margin-top:200px;
+    font-style: bold;
+}
+button{
+    border: 2px solid black;
+    border-radius: 10px;
+    background:linear-gradient(120deg,red,rgb(216, 209, 2));
+    height:40px;
+    width: 90px;
+    margin: 10px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.742);
+
+}
