@@ -1,0 +1,83 @@
+/* General Page */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Quote Container */
+.quote-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+/* Quote Text */
+#quote-text {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Author */
+#quote-author {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Buttons */
+button, select {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#new-quote-btn {
+  background: #6C63FF;
+  color: #fff;
+}
+
+#new-quote-btn:hover {
+  background: #574feb;
+  transform: scale(1.05);
+}
+
+.share-buttons button {
+  background: #f0f0f0;
+}
+
+.share-buttons button:hover {
+  background: #ddd;
+  transform: scale(1.05);
+}
+
+/* Loader Spinner */
+#loader {
+  border: 4px solid #e6cfcf;
+  border-top: 4px solid #6C63FF;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 5.8s linear infinite;
+  margin: 0 auto 20px;
+  display: none;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}

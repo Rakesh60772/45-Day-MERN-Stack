@@ -1,0 +1,63 @@
+/* General page styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container box */
+div {
+    background: hsl(195, 27%, 91%);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Quote text */
+#quote-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Quote author */
+#quote-author {
+    font-size: 1rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Button styling */
+#new-quote-btn {
+    padding: 12px 25px;
+    background-color: #6C63FF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover & click effect */
+#new-quote-btn:hover {
+    background-color: #574feb;
+    transform: scale(1.05);
+}
+
+#new-quote-btn:active {
+    transform: scale(0.95);
+}
+
+
