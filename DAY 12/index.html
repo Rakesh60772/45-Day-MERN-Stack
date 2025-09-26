@@ -32,31 +32,4 @@
     </section>
   </div>
 </body>
-<script>
-  async function loadBlogs() {
-    try {
-      const response = await fetch("http://localhost:3000/read-blog");
-      const blogs = await response.json();
-
-      const blogSection = document.createElement("section");
-      blogSection.className = "blog-list";
-
-      blogs.forEach(blog => {
-        const blogItem = document.createElement("div");
-        blogItem.className = "blog-item";
-        blogItem.innerHTML = `
-          <h3>${blog.title}</h3>
-          <p><strong>Author:</strong> ${blog.author}</p>
-        `;
-        blogSection.appendChild(blogItem);
-      });
-
-      document.body.appendChild(blogSection);
-    } catch (error) {
-      console.error("Error fetching blogs:", error);
-    }
-  }
-
-  window.onload = loadBlogs;
-</script>
 </html>
