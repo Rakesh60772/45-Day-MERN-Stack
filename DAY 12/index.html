@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogging Webpage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="title">
+      <h1 class="titleArea">My Blog</h1>
+      <div class="button-group">
+        <form action="http://localhost:3000/read-blog" method="GET">
+            <input type="submit" value="GET Blog" class="btn read" />
+        </form>
+      </div>
+    </header>
+
+    <section class="blog">
+      <form action="http://localhost:3000/submit-blog" method="POST">
+        <label for="title">Blog Title:</label>
+        <input type="text" id="name" name="title" placeholder="Blog Title" />
+
+        <label for="content">Content:</label>
+        <textarea id="blog" name="content" placeholder="Start writing your blog here..."></textarea>
+
+        <label for="author">Author:</label>
+        <input type="text" id="name" name="author" placeholder="Author name" />
+        <input type="submit" value="POST Blog" class="btn submit" />
+      </form>
+    </section>
+  </div>
+</body>
+<script>
+  async function loadBlogs() {
+    try {
+      const response = await fetch("http://localhost:3000/read-blog");
+      const blogs = await response.json();
+
+      const blogSection = document.createElement("section");
+      blogSection.className = "blog-list";
+
+      blogs.forEach(blog => {
+        const blogItem = document.createElement("div");
+        blogItem.className = "blog-item";
+        blogItem.innerHTML = `
+          <h3>${blog.title}</h3>
+          <p><strong>Author:</strong> ${blog.author}</p>
+        `;
+        blogSection.appendChild(blogItem);
+      });
+
+      document.body.appendChild(blogSection);
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
+    }
+  }
+
+  window.onload = loadBlogs;
+</script>
+</html>
